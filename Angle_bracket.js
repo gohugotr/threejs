@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('./angle_bracket-transformed.glb')
+  const { nodes, materials } = useGLTF('angle_bracket-transformed.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh geometry={nodes.AngleBracket.geometry} material={materials['Material.003']} position={[0.44, -0.76, -1.56]} />
@@ -15,4 +15,4 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload('./angle_bracket-transformed.glb')
+useGLTF.preload('angle_bracket-transformed.glb')
