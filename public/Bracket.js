@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('./bracket-transformed.glb')
+  const { nodes, materials } = useGLTF('bracket-transformed.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh geometry={nodes.Text.geometry} material={materials['Material.005']} />
@@ -15,4 +15,4 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload('/bracket-transformed.glb')
+useGLTF.preload('bracket-transformed.glb')

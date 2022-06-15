@@ -6,7 +6,7 @@ import * as THREE from "three";
 export const Brace = ({ index, z }) => {
   const colors = Object.keys(THREE.Color.NAMES);
   const ref = useRef();
-  const { nodes, materials } = useGLTF("/brace-transformed.glb");
+  const { nodes, materials } = useGLTF("brace-transformed.glb");
   const [hover, setHover] = useState(false);
   const { viewport, camera } = useThree();
   const { width, height } = viewport.getCurrentViewport(camera, [0, 0, -z]);
